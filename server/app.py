@@ -19,7 +19,7 @@ api = Api(app)
 # Define a route for the homepage
 @app.route("/")
 def index():
-    return "<h1>Pizza Hut</h1>"
+    return "<h1>The Pizza Place</h1>"
 
 # Define a resource for retrieving restaurant data
 class Restaurant(Resource):
@@ -45,7 +45,7 @@ api.add_resource(Restaurant, "/restaurants")
 
 class RestaurantId(Resource):
     def get(self, id):
-        restaurant = Restaurants.query.get(id)
+        restaurant = Restaurants.query.filter(id == id).first()
         if restaurant:
             data = {
                 "id": restaurant.id,
@@ -68,7 +68,7 @@ class RestaurantId(Resource):
 
 
 # Add the RestaurantId resource to the API with a specific endpoint
-api.add_resource(RestaurantId, "/resid/<int:id>")
+api.add_resource(RestaurantId, "/restaurants/<int:id>")
 
 # Define a resource for deleting a restaurant
 
@@ -76,7 +76,7 @@ class Restaurant_Delete(Resource):
 
     def delete(self, id):
 
-        res_delete = Restaurants.query.filter(id==id).first()
+        res_delete = Restaurants.query.filter_by(id=id).first()
 
         if res_delete:
 
@@ -91,7 +91,7 @@ class Restaurant_Delete(Resource):
 # Add the Restaurant_Delete resource to the API with a specific endpoint
 
 
-api.add_resource(Restaurant_Delete, "/deleteres/<int:id>")
+api.add_resource(Restaurant_Delete, "/delete/<int:id>")
 
 # Define a resource for retrieving pizza data
 
@@ -135,7 +135,7 @@ class Restaurant_pizza(Resource):
         db.session.add(new_data)
         db.session.commit()
 
-        return make_response("", 201)
+        return make_response("created!", 201)
 
 # Add the Restaurant_pizza resource to the API with a specific endpoint
 
