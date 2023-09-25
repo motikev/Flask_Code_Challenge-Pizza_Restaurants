@@ -76,7 +76,7 @@ class Restaurant_Delete(Resource):
 
     def delete(self, id):
 
-        res_delete = Restaurants.query.filter_by(id=id).first()
+        res_delete = Restaurants.query.filter(id==id).first()
 
         if res_delete:
 
