@@ -80,7 +80,6 @@ the folder structure is modelled as follows;
 
 + pipenv/: The virtual environment where Python packages are installed.
 
-+ requirements.txt: Lists the required Python packages for the project.
 
 #### Project Author
 this application was done by;
