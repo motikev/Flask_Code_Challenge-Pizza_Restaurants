@@ -84,5 +84,5 @@ the folder structure is modelled as follows;
 
 #### Project Author
 this application was done by;
-Kelvin Moti'
-email; kmotties@gmail.com
+ # Kelvin Moti'
+# email; kmotties@gmail.com
