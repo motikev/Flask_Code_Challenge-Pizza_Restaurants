@@ -26,11 +26,11 @@ install the following:
 
 ## Installation 
 
-i). clone repository
-ii). navigate to project directory
-iii). create and activate a virtual environment
-iv). install required packages; cd server
-v). set up database
+1. clone repository
+2. navigate to project directory
+3. create and activate a virtual environment
+4. install required packages; cd server
+5. set up database
 - flask db init
 - flask db revision --autogenerate -m"message"
 - flask db upgrade
