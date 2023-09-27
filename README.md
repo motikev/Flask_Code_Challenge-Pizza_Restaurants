@@ -21,15 +21,15 @@ install the following:
 . Flask-SQLAlchemy
 . Flask-Migrate
 . Flask-RESTful
-. Enviroment
+. Environment
 . SQLite
 
 ## Installation 
+
 i). clone repository
 ii). navigate to project directory
 iii). create and activate a virtual environment
-iv). install required packages;
-- cd server
+iv). install required packages; cd server
 v). set up database
 - flask db init
 - flask db revision --autogenerate -m"message"
@@ -70,7 +70,7 @@ API available at http://localhost:5555
 - To create a new menu item: POST http://localhost:5555/restaurant_pizzas with the JSON data in the request body.
 
 ### Project Structure
-the folder structure is modelled as follows;
+the folder structure is modeled as follows;
 
 + app.py: The main Flask application file containing the API routes and initialization code.
 
